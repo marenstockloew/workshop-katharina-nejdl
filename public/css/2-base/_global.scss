@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    // This defines what 1rem is (Here it is 10px because the default in the browser is 16px)
+    font-size: 62.5%;
+
+    @include respond(phone) {
+        font-size: 35%;
+    }
+    @include respond(tab-port) {
+        font-size: 48%;
+    }
+    @include respond(tab-land) {
+        font-size: 56%;
+    }
+    @include respond(big-screen) {
+        font-size: 75%;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    background-color: blue;
+}

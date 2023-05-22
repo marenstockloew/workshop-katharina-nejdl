@@ -1,0 +1,41 @@
+/* COLOR VARIABLES */
+/* BREAKPOINTS */
+/* PATHS */
+/* LENGTH UNITS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 35%;
+  }
+}
+@media (max-width: 56em) {
+  html {
+    font-size: 48%;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  background-color: blue;
+}
+
+/* FONTS */
+/* TYPOGRAPHY *//*# sourceMappingURL=main.css.map */

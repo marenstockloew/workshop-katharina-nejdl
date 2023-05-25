@@ -15,8 +15,9 @@
   }
 
 @font-face {
-    font-family:"Belgika";
-    src: url("./webfonts/belgika-16th-webfont.woff") format("woff");
+    font-family:"Sligoil";
+    src: url("./webfonts/Sligoil-Micro.woff2") format("woff2"),
+         url("./webfonts/Sligoil-Micro.woff") format("woff");
     font-weight:normal;
     font-style:normal;
   }
@@ -33,20 +34,10 @@ body {
     }
 }
 
-h1 {
-    font-family: "Belgika";
-    font-size: 5rem;
-    margin: 2.5rem;
-    filter: blur(.7rem);
-
-    &:hover {
-        filter: blur(0);
-    }
-}
-
 #textinput,
-#submitbutton {
-    font-family: "Porpora";
+#submitbutton,
+#questionField {
+    font-family: "Sligoil";
     font-size: 2.5rem;
     @include respond(phone) {
         font-size: 2rem;

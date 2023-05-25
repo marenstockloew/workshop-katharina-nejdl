@@ -1,60 +1,63 @@
 // BACKGROUND AND TEXT COLOR
 
+// 2 functions for color range
+function relation1(w) {
+    return ( (1/w) * 500 * 255);
+}
+function relation2(w) {
+    return ( (w/3000 ) * 255);
+}
+
+// Definitions of colors depending on the window width
 var widthOutput = window.innerWidth;
 
-colorValueVariable = "rgba( 0, " + String( (1/widthOutput) * 255 * 800 ) + "," + String( (widthOutput/1500) * 255 ) + ", 1)";
-colorShadowVariable = "0px 0px 10px 5px " + colorValueVariable + ", inset 0px 0px 10px 5px " + colorValueVariable;
-colorValueVariableAlpha = "rgba( 0, " + String( (1/widthOutput) * 255 * 800 ) + "," + String( (widthOutput/1500) * 255 ) + ", .5)";
+var colorValueVariable1 = "rgba( " + String( relation1(widthOutput) ) + ",0," + String( relation2(widthOutput) ) + ", 1)";
+var colorValueVariable2 = "rgba( 0, " + String( relation1(widthOutput) ) + "," + String( relation2(widthOutput) ) + ", 1)";
+var ShadowVariable__controlroom = "0px 0px 10px 5px " + colorValueVariable2 + ", inset 0px 0px 10px 5px " + colorValueVariable2;
+var colorValueVariable2Alpha = "rgba( 0, " + String( relation1(widthOutput) ) + "," + String( relation2(widthOutput) ) + ", .8)";
 
-// document.body.style.backgroundColor = colorValueVariable;
 
-document.getElementById("textinput").style.boxShadow = colorShadowVariable;
-document.getElementById("questionField").style.boxShadow = colorShadowVariable;
-document.getElementById("submitbutton").style.boxShadow = colorShadowVariable;
-document.getElementById("volume1").style.boxShadow = colorShadowVariable;
-document.getElementById("volume1").style.backgroundColor = colorValueVariableAlpha;
-document.getElementById("volume2").style.boxShadow = colorShadowVariable;
-document.getElementById("volume2").style.backgroundColor = colorValueVariableAlpha;
-document.getElementById("volume3").style.boxShadow = colorShadowVariable;
-document.getElementById("volume3").style.backgroundColor = colorValueVariableAlpha;
-document.getElementById("volume4").style.boxShadow = colorShadowVariable;
-document.getElementById("volume4").style.backgroundColor = colorValueVariableAlpha;
+document.getElementById("textinput").style.boxShadow = ShadowVariable__controlroom;
+document.getElementById("questionField").style.boxShadow = ShadowVariable__controlroom;
+document.getElementById("submitbutton").style.boxShadow = ShadowVariable__controlroom;
+document.getElementById("volume1").style.boxShadow = ShadowVariable__controlroom;
+document.getElementById("volume1").style.backgroundColor = colorValueVariable2Alpha;
+document.getElementById("volume2").style.boxShadow = ShadowVariable__controlroom;
+document.getElementById("volume2").style.backgroundColor = colorValueVariable2Alpha;
+document.getElementById("volume3").style.boxShadow = ShadowVariable__controlroom;
+document.getElementById("volume3").style.backgroundColor = colorValueVariable2Alpha;
+document.getElementById("volume4").style.boxShadow = ShadowVariable__controlroom;
+document.getElementById("volume4").style.backgroundColor = colorValueVariable2Alpha;
 
-document.body.style.color =
-    "rgba( " + (1/widthOutput) * 255 * 800 + ",0," + (widthOutput/1500) * 255 + ", 1)";
+document.body.style.color = colorValueVariable1;
 
-document.getElementById("textinput").style.color = 
-    "rgba( " + (1/widthOutput) * 255 * 800 + ",0," + (widthOutput/1500) * 255 + ", 1)";
+document.getElementById("textinput").style.color = colorValueVariable1;
 
-document.getElementById("submitbutton").style.color = 
-    "rgba( " + (1/widthOutput) * 255 * 800 + ",0," + (widthOutput/1500) * 255 + ", 1)";
+document.getElementById("submitbutton").style.color = colorValueVariable1;
 
 var resizeColor = function(e) {
-    //note i need to pass the event as an argument to the function
-    widthOutput = e.target.innerWidth;
-    
-    colorValueVariable = "rgba( 0, " + String( (1/widthOutput) * 255 * 800 ) + "," + String( (widthOutput/1500) * 255 ) + ", 1)";
+    var widthOutput = window.innerWidth;
 
-    // document.body.style.backgroundColor = colorValueVariable;
+    var colorValueVariable1 = "rgba( " + String( relation1(widthOutput) ) + ",0," + String( relation2(widthOutput) ) + ", 1)";
+    var colorValueVariable2 = "rgba( 0, " + String( relation1(widthOutput) ) + "," + String( relation2(widthOutput) ) + ", 1)";
+    var ShadowVariable__controlroom = "0px 0px 10px 5px " + colorValueVariable2 + ", inset 0px 0px 10px 5px " + colorValueVariable2;
+    var colorValueVariable2Alpha = "rgba( 0, " + String( relation1(widthOutput) ) + "," + String( relation2(widthOutput) ) + ", .8)";
 
-    document.getElementById("textinput").style.boxShadow = colorShadowVariable;
-    document.getElementById("questionField").style.boxShadow = colorShadowVariable;
-    document.getElementById("submitbutton").style.boxShadow = colorShadowVariable;
-    document.getElementById("volume1").style.boxShadow = colorShadowVariable;
-    document.getElementById("volume1").style.backgroundColor = colorValueVariableAlpha;
-    document.getElementById("volume2").style.boxShadow = colorShadowVariable;
-    document.getElementById("volume2").style.backgroundColor = colorValueVariableAlpha;
-    document.getElementById("volume3").style.boxShadow = colorShadowVariable;
-    document.getElementById("volume3").style.backgroundColor = colorValueVariableAlpha;
-    document.getElementById("volume4").style.boxShadow = colorShadowVariable;
-    document.getElementById("volume4").style.backgroundColor = colorValueVariableAlpha;
+    document.getElementById("textinput").style.boxShadow = ShadowVariable__controlroom;
+    document.getElementById("questionField").style.boxShadow = ShadowVariable__controlroom;
+    document.getElementById("submitbutton").style.boxShadow = ShadowVariable__controlroom;
+    document.getElementById("volume1").style.boxShadow = ShadowVariable__controlroom;
+    document.getElementById("volume1").style.backgroundColor = colorValueVariable2Alpha;
+    document.getElementById("volume2").style.boxShadow = ShadowVariable__controlroom;
+    document.getElementById("volume2").style.backgroundColor = colorValueVariable2Alpha;
+    document.getElementById("volume3").style.boxShadow = ShadowVariable__controlroom;
+    document.getElementById("volume3").style.backgroundColor = colorValueVariable2Alpha;
+    document.getElementById("volume4").style.boxShadow = ShadowVariable__controlroom;
+    document.getElementById("volume4").style.backgroundColor = colorValueVariable2Alpha;
     
-    document.body.style.color =
-        "rgba( " + (1/widthOutput) * 255 * 800 + ",0," + (widthOutput/1500) * 255 + ", 1)";
-    document.getElementById("textinput").style.color = 
-        "rgba( " + (1/widthOutput) * 255 * 800 + ",0," + (widthOutput/1500) * 255 + ", 1)";
-    document.getElementById("submitbutton").style.color = 
-        "rgba( " + (1/widthOutput) * 255 * 800 + ",0," + (widthOutput/1500) * 255 + ", 1)";
+    document.body.style.color = colorValueVariable1;
+    document.getElementById("textinput").style.color = colorValueVariable1;
+    document.getElementById("submitbutton").style.color = colorValueVariable1;
  }
 
 // BORDER RADII

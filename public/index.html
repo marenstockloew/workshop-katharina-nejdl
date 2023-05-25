@@ -14,54 +14,36 @@
   </head>
   <body>
 
-    <form id="answerForm">
+    <form id="answerForm" autocomplete="off">
 
       <div class="controlroom">
 
-        <div class="controlroom__element controlroom__question">
+        <div class="controlroom__element controlroom__question" id="questionField">
           <p>Describe the texture of the last thing you have eaten without mentioning what it was.</p>
         </div>
 
         
 
-          <div class="controlroom__element controlroom__textfield">
-            <input type="text" class="controlroom__textfield__input" id="textinput" required size="10" placeholder="Write answer...">
-          </div>
+        <div class="controlroom__element controlroom__textfield">
+          <textarea class="controlroom__textfield__input" id="textinput" placeholder="Write answer..."></textarea>
+        </div>
 
-          <div class="controlroom__element controlroom__button">
-            <button type="submit" id="submitbutton">Submit</button>
-          </div>
+        <div class="controlroom__element controlroom__button">
+          <button type="submit" id="submitbutton">Submit</button>
+        </div>
 
-          <div class="controlroom__element" id="controlroom__element1"><input type="range" class="controlroom__range" id="volume1" name="volume" min="0" max="100" value="60"></div>
-          <div class="controlroom__element" id="controlroom__element2"><input type="range" class="controlroom__range" id="volume2" name="volume" min="0" max="100" value="20"></div>
-          <div class="controlroom__element" id="controlroom__element3"><input type="range" class="controlroom__range" id="volume3" name="volume" min="0" max="100" value="80"></div>
-          <div class="controlroom__element" id="controlroom__element4"><input type="range" class="controlroom__range" id="volume4" name="volume" min="0" max="100" value="70"></div>
-
-        
+        <div class="controlroom__element" id="controlroom__element1"><input type="range" class="controlroom__range" id="volume1" name="volume" min="0" max="80" value="60"></div>
+        <div class="controlroom__element" id="controlroom__element2"><input type="range" class="controlroom__range" id="volume2" name="volume" min="0" max="80" value="20"></div>
+        <div class="controlroom__element" id="controlroom__element3"><input type="range" class="controlroom__range" id="volume3" name="volume" min="0" max="80" value="80"></div>
+        <div class="controlroom__element" id="controlroom__element4"><input type="range" class="controlroom__range" id="volume4" name="volume" min="0" max="80" value="70"></div>
 
       </div>
 
     </form>
 
-      <div class="container" id="storycontainer">
+    <div class="container" id="storycontainer">
 
-        <div class="container__element"></div>
-        <div class="container__element"></div>
-        <div class="container__element"></div>
-        <div class="container__element"></div>
-
-        <div class="container__element container__text-container" id="text-container1">
-          <p>
-            Once upon a time there was a very beautiful fish who lived in the river. The lion saw the fish and had a sudden craving for it. But when the lion reached the river, he realized that he couldn’t swim and get to the fish. So the lion asked the opossum for advice, who told him: “It’s very simple. Fish can’t live out of water. All you have to do is drink all the water out of the river. The fish will be left high and dry and then you can catch him and eat him.” The lion was very pleased with the opossum’s advice and rewarded him with a position in his kingdom. The lion went to the edge of the river and began to drink. He died when all that water burst him into pieces. The opossum became unemployed. 
-          </p>
-        </div>
-
-        <div class="container__element"></div>
-        <div class="container__element"></div>
-        <div class="container__element"></div>
-        <div class="container__element"></div>
-
-      </div>
+    </div>
       
     <script type="module" src="./js/firebaseconnection.js"></script>
     <script src="./js/main.js"></script>

@@ -1,0 +1,178 @@
+.controlroom {
+    margin: 0rem 10rem 0 10rem;
+
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-areas: "r1 . tex tex tex r2 "
+                        ". r3 tex tex tex que"
+                        "but . . r4 . que";  
+
+    @include respond(phone) {
+        margin: 0rem 1rem 0 1rem;
+        grid-template-areas: "r1 tex tex"
+                             ". tex tex"
+                             ". r4 r2"
+                             "que que ."
+                             "r3 . but";
+    }
+    @include respond(tab-port) {
+        margin: 0rem 2rem 0 2rem;
+        grid-template-areas: "r1 tex tex"
+                             ". tex tex"
+                             ". r4 r2"
+                             "que que ."
+                             "r3 . but";
+    }
+    @include respond(tab-land) {
+        margin: 0rem 2rem 0 2rem;
+        grid-template-areas: "r1 . tex tex"
+                             ". r4 tex tex"
+                             "que que . r2"
+                             "que que . but"
+                             ". r3 . but";
+    }
+
+    justify-items: center;
+    align-items: center;
+
+    &__element {
+        padding: 2rem;
+        border-radius: 1rem;
+
+        // animation-delay: .5s;
+        // animation-duration: 2s;
+        // animation-iteration-count: 3;   
+        // animation-timing-function: ease-in-out;
+        // animation-name: pulse;
+    }
+
+    &__question {
+        background-color: rgba(255,255,255,.5);
+        border: .1rem solid white;
+        width: 100%;
+        max-width: 300px;
+        max-height: 300px;
+        aspect-ratio: 1 / 1;
+        border-radius: 20%;
+        transform: rotate(-10deg);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__textfield {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 10%;
+        &__input {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 10%;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+            background: rgba(255,255,255,.5);
+            border: .1rem solid white;
+            transform: rotate(15deg);
+        }
+    }
+
+    &__button {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 20%;
+
+        & button {
+            width: 100%;
+            height: 100%;
+            border-radius: 20%;
+            border: none;
+            background: rgba(255,255,255,.5);
+            border: .1rem solid white;
+            transform: rotate(-12deg);
+
+            &:hover {
+                cursor: pointer;
+                background-color: white;
+            }
+        }
+    }
+
+    &__range { 
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 10%;
+        background: rgba(255,255,255,.5);
+        border: .1rem solid white;
+        outline: none;
+        overflow: hidden;
+        cursor: pointer;
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: .00001rem;
+            height: .00001rem;
+            border-radius: 0;
+            background-color: white;
+            box-shadow: -100px 0 0 100px white;
+            transform: translate(-50%); 
+            cursor: pointer;
+            border: 0;
+        }
+        &::-moz-range-thumb {
+            -moz-appearance: none;
+            appearance: none;
+            width: .00001rem;
+            height: .00001rem;
+            border-radius: 0;
+            background-color: white;
+            box-shadow: -100px 0 0 100px white;
+            transform: translate(-50%); 
+            cursor: pointer;
+            border: 0;
+        }
+    }
+}
+
+#volume1 {
+    transform: rotate(20deg);
+}
+#controlroom__element1 {
+    grid-area: r1;
+}
+#volume2 {
+    transform: rotate(-10deg);
+}
+#controlroom__element2 {
+    grid-area: r2;
+}
+#volume3 {
+    transform: rotate(40deg);
+}
+#controlroom__element3 {
+    grid-area: r3;
+}
+#volume4 {
+    transform: rotate(-5deg);
+}
+#controlroom__element4 {
+    grid-area: r4;
+}
+.controlroom__question {
+    grid-area: que;
+}
+.controlroom__textfield {
+    grid-area: tex;
+}
+.controlroom__button {
+    grid-area: but;
+}

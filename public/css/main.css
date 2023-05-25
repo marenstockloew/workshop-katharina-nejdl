@@ -1,7 +1,6 @@
 /* COLOR VARIABLES */
 /* BREAKPOINTS */
 /* PATHS */
-/* LENGTH UNITS */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,15 +31,50 @@ html {
   }
 }
 
-body {
-  overflow-x: hidden;
-}
-
 /* FONTS */
+@font-face {
+  font-family: "Porpora";
+  src: url("./webfonts/Porpora-Regular.woff2") format("woff2"), url("./webfonts/Porpora-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Belgika";
+  src: url("./webfonts/belgika-16th-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* TYPOGRAPHY */
 body {
-  font-size: 2rem;
-  color: red;
+  font-family: "Porpora";
+  font-size: 2.5rem;
+}
+@media (max-width: 37.5em) {
+  body {
+    font-size: 2rem;
+  }
+}
+
+h1 {
+  font-family: "Belgika";
+  font-size: 5rem;
+  margin: 2.5rem;
+  filter: blur(0.7rem);
+}
+h1:hover {
+  filter: blur(0);
+}
+
+#textinput,
+#submitbutton {
+  font-family: "Porpora";
+  font-size: 2.5rem;
+}
+@media (max-width: 37.5em) {
+  #textinput,
+  #submitbutton {
+    font-size: 2rem;
+  }
 }
 
 .container {
@@ -60,4 +94,167 @@ body {
 }
 .container__text-container {
   padding: 2rem;
+  margin-left: 20rem;
+}
+
+.controlroom {
+  margin: 0rem 10rem 0 10rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "r1 . tex tex tex r2 " ". r3 tex tex tex que" "but . . r4 . que";
+  justify-items: center;
+  align-items: center;
+}
+@media (max-width: 37.5em) {
+  .controlroom {
+    margin: 0rem 1rem 0 1rem;
+    grid-template-areas: "r1 . tex" ". . tex" ". r4 r2" "que que ." "r3 . but";
+  }
+}
+@media (max-width: 56em) {
+  .controlroom {
+    margin: 0rem 2rem 0 2rem;
+    grid-template-areas: "r1 . tex" ". . tex" ". r4 r2" "que que ." "r3 . but";
+  }
+}
+@media (max-width: 75em) {
+  .controlroom {
+    margin: 0rem 2rem 0 2rem;
+    grid-template-areas: "r1 . tex tex" ". r4 tex tex" "que que . r2" "que que . but" ". r3 . but";
+  }
+}
+.controlroom__element {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.controlroom__question {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0.1rem solid white;
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 20%;
+  transform: rotate(-10deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.controlroom__textfield {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.controlroom__textfield__input {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  border: 0.1rem solid white;
+  transform: rotate(15deg);
+}
+.controlroom__button {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.controlroom__button button {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  border: 0.1rem solid white;
+  transform: rotate(-12deg);
+}
+.controlroom__button button:hover {
+  cursor: pointer;
+  background-color: white;
+}
+.controlroom__range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 10%;
+  background: rgba(255, 255, 255, 0.5);
+  border: 0.1rem solid white;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.controlroom__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.00001rem;
+  height: 0.00001rem;
+  border-radius: 0;
+  background-color: white;
+  box-shadow: -100px 0 0 100px white;
+  transform: translate(-50%);
+  cursor: pointer;
+  border: 0;
+}
+.controlroom__range::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  width: 0.00001rem;
+  height: 0.00001rem;
+  border-radius: 0;
+  background-color: white;
+  box-shadow: -100px 0 0 100px white;
+  transform: translate(-50%);
+  cursor: pointer;
+  border: 0;
+}
+
+#volume1 {
+  transform: rotate(20deg);
+}
+
+#controlroom__element1 {
+  grid-area: r1;
+}
+
+#volume2 {
+  transform: rotate(-10deg);
+}
+
+#controlroom__element2 {
+  grid-area: r2;
+}
+
+#volume3 {
+  transform: rotate(40deg);
+}
+
+#controlroom__element3 {
+  grid-area: r3;
+}
+
+#volume4 {
+  transform: rotate(-5deg);
+}
+
+#controlroom__element4 {
+  grid-area: r4;
+}
+
+.controlroom__question {
+  grid-area: que;
+}
+
+.controlroom__textfield {
+  grid-area: tex;
+}
+
+.controlroom__button {
+  grid-area: but;
 }/*# sourceMappingURL=main.css.map */

@@ -6,11 +6,49 @@
 //         url("./webfonts/movement/Movement-IndirectThin.otf") format("otf");
 // }
 
+@font-face {
+    font-family:"Porpora";
+    src: url("./webfonts/Porpora-Regular.woff2") format("woff2"),
+         url("./webfonts/Porpora-Regular.woff") format("woff");
+    font-weight:normal;
+    font-style:normal;
+  }
+
+@font-face {
+    font-family:"Belgika";
+    src: url("./webfonts/belgika-16th-webfont.woff") format("woff");
+    font-weight:normal;
+    font-style:normal;
+  }
+
 /* TYPOGRAPHY */
 
 // $font-header: movement;
 
 body {
-    font-size: 2rem;
-    color: red;
+    font-family: "Porpora";
+    font-size: 2.5rem;
+    @include respond(phone) {
+        font-size: 2rem;
+    }
+}
+
+h1 {
+    font-family: "Belgika";
+    font-size: 5rem;
+    margin: 2.5rem;
+    filter: blur(.7rem);
+
+    &:hover {
+        filter: blur(0);
+    }
+}
+
+#textinput,
+#submitbutton {
+    font-family: "Porpora";
+    font-size: 2.5rem;
+    @include respond(phone) {
+        font-size: 2rem;
+    }
 }

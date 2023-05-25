@@ -4,6 +4,7 @@
 @import '1-helpers/variables';
 @import '1-helpers/functions';
 @import '1-helpers/mixins';
+@import '1-helpers/animations';
 
 // BASE
 @import '2-base/global';
@@ -12,3 +13,4 @@
 
 // HOME
 @import '3-home/grid';
+@import '3-home/control-room';

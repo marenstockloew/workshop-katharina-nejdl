@@ -14,9 +14,38 @@
   </head>
   <body>
 
-      <div class="container">
+    <form id="answerForm">
 
-        <div class="container__element"><button>press me</button></div>
+      <div class="controlroom">
+
+        <div class="controlroom__element controlroom__question">
+          <p>Describe the texture of the last thing you have eaten without mentioning what it was.</p>
+        </div>
+
+        
+
+          <div class="controlroom__element controlroom__textfield">
+            <input type="text" class="controlroom__textfield__input" id="textinput" required size="10" placeholder="Write answer...">
+          </div>
+
+          <div class="controlroom__element controlroom__button">
+            <button type="submit" id="submitbutton">Submit</button>
+          </div>
+
+          <div class="controlroom__element" id="controlroom__element1"><input type="range" class="controlroom__range" id="volume1" name="volume" min="0" max="100" value="60"></div>
+          <div class="controlroom__element" id="controlroom__element2"><input type="range" class="controlroom__range" id="volume2" name="volume" min="0" max="100" value="20"></div>
+          <div class="controlroom__element" id="controlroom__element3"><input type="range" class="controlroom__range" id="volume3" name="volume" min="0" max="100" value="80"></div>
+          <div class="controlroom__element" id="controlroom__element4"><input type="range" class="controlroom__range" id="volume4" name="volume" min="0" max="100" value="70"></div>
+
+        
+
+      </div>
+
+    </form>
+
+      <div class="container" id="storycontainer">
+
+        <div class="container__element"></div>
         <div class="container__element"></div>
         <div class="container__element"></div>
         <div class="container__element"></div>
@@ -33,11 +62,8 @@
         <div class="container__element"></div>
 
       </div>
-
-      <footer class="footer">
-        Text taken from the writings of Subcomandante Marcos for the Zapatistas and can be found <a href="https://theanarchistlibrary.org/library/subcomandante-marcos-our-word-is-our-weapon#toc161">here</a>.
-      </footer>
-    
+      
+    <script type="module" src="./js/firebaseconnection.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
